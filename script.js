@@ -1,12 +1,13 @@
+const getBtn = document.getElementById('get-btn');
+
+const getData = () => {
+  fetch('https://api.slothpixel.me/api/skyblock/bazaar/').then(response => {
+    return response.json();
+  })
+  .then(responseData => {
+    console.log(responseData);
+  });
+};
 
 
-function loadDoc(xFunction) {
-    const xhttp=new XMLHttpRequest();
-    xhttp.onload = function() {xFunction(this);}
-    xhttp.open("GET", "https://api.slothpixel.me/api/skyblock/bazaar/");
-    xhttp.send();
-  }
-  
-  function myFunction(xhttp) {
-    document.getElementById("demo").innerHTML =  xhttp.responseText;
-  }
+getBtn.addEventListener('click', getData);
