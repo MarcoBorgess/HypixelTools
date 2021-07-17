@@ -21,10 +21,8 @@ let pets = [];
 function carregaTabela(pets) {
   const tableBody = document.getElementById('tableData');
   let dataHtml = '';
-  let i = 1;
   for(let pet of pets) {
     dataHtml += `<tr>
-                  <td>${i}</td>
                   <td>${pet.nome}</td>
                   <td>${pet.dias}</td>
                   <td>${pet.item}</td>
@@ -37,7 +35,6 @@ function carregaTabela(pets) {
                   <td>${pet.profit().toLocaleString('pt-BR')}</td>
                   <td>${pet.pdia().toLocaleString('pt-BR')}</td>
                 <tr/>`
-    i += 1;
   }
 
   tableBody.innerHTML = dataHtml;
@@ -79,17 +76,7 @@ getBtn.addEventListener('click', function() {
 });
 
 /*
-valor: product[0][1],
-  total: function() {
-    return this.qntd*this.valor;
-  },
-  upgrade: 20000000,
-  epicb: 0,
-  legb: 0,
-  profit: function() {
-    return this.legb-(this.epicb+this.upgrade+this.total);
-  },
-  pdia: function() {
-    return this.profit/this.dias;
-  }
+LEMBRAR DE ADICIONAR:
+  1. ORDENAÇÃO
+  2. AUCTION HOUSE
 */
