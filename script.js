@@ -8,6 +8,7 @@ window.onload = () => {
 //['ITEMID', 0, "PETNAME", DIAS, "ITEM", QNTD, UPGRADE, "] PETNAME", 999999999, 999999999],
 
 let product = [
+              ['REVENANT_FLESH', 0, "Armadillo", 5, "Nenhum", 0, 1000000, "] Armadillo", 999999999, 999999999],
               ['ENCHANTED_RAW_SALMON', 0, "Baby Yeti", 12, "E. Raw Salmon", 16, 20000000, "] Baby Yeti", 999999999, 999999999], 
               ['ENCHANTED_RED_MUSHROOM', 0, "Bat", 3, "E. Red Mushroom", 64, 250000, "] Bat", 999999999, 999999999],
               ['ENCHANTED_GOLD_BLOCK', 0, "Bee", 3, "E. Gold Block", 9, 450000, "] Bee", 999999999, 999999999],
@@ -29,8 +30,8 @@ let product = [
               ['REVENANT_FLESH', 0, "Jerry", 3, "Move Jerry", 1, 100000, "] Jerry", 999999999, 999999999],
               ['ENCHANTED_RAW_BEEF', 0, "Lion", 14, "E. Raw Beef", 1024, 14000000, "] Lion", 999999999, 999999999],
               ['ENCHANTED_MAGMA_CREAM', 0, "Magma Cube", 10, "E. Magma Cream", 16, 500000, "] Magma Cube", 999999999, 999999999],
-              ['REVENANT_FLESH', 0, "Megalodon", 20, "Nenhum", 8, 10000000, "] Megalodon", 999999999, 999999999],
-              ['REVENANT_FLESH', 0, "Monkey", 12, "Nenhum", 8, 17000000, "] Monkey", 999999999, 999999999],
+              ['REVENANT_FLESH', 0, "Megalodon", 20, "Nenhum", 0, 10000000, "] Megalodon", 999999999, 999999999],
+              ['REVENANT_FLESH', 0, "Monkey", 12, "Nenhum", 0, 17000000, "] Monkey", 999999999, 999999999],
               ['ENCHANTED_JUNGLE_LOG', 0, "Ocelot", 5, "E. Jungle Wood", 512, 250000, "] Ocelot", 999999999, 999999999],
               ['ENCHANTED_FEATHER', 0, "Parrot", 14, "E. Feather", 16, 250000, "] Parrot", 999999999, 999999999],
               ['ENCHANTED_BLAZE_POWDER', 0, "Phoenix", 20, "E. Blaze Powder", 1024, 100000000, "] Phoenix", 9999999999, 9999999999],
@@ -50,12 +51,11 @@ let product = [
               ['ENCHANTED_COAL_BLOCK', 0, "Wither Skeleton", 5, "E. Block of Coal", 8, 250000, "] Wither Skeleton", 999999999, 999999999],
               ['ENCHANTED_SPRUCE_LOG', 0, "Wolf", 5, "E. Spruce Wood", 512, 250000, "] Wolf", 999999999, 999999999],
               ['ENCHANTED_ROTTEN_FLESH', 0, "Zombie", 10, "Zombie's Heart", 2048, 250000, "] Zombie", 999999999, 999999999],
-
             ];
 
 let pets = [];
 
-function carregaTabela(pets, pets2) {
+function carregaTabela(pets) {
   const tableBody = document.getElementById('tableData');
   let dataHtml = '';
   for (let pet of pets) {
@@ -63,12 +63,12 @@ function carregaTabela(pets, pets2) {
                   <td>${pet.nome}</td>
                   <td>${pet.dias}</td>
                   <td>${pet.item}</td>
-                  <td>${pet.qntd}</td>
                   <td>${pet.valor}</td>
-                  <td>${pet.upgrade}</td>
-                  <td>${pet.epicb}</td>
-                  <td>${pet.total()}</td>
-                  <td>${pet.legb}</td>
+                  <td>${pet.qntd}</td>
+                  <td>${pet.fup().toLocaleString('pt-BR')}</td>
+                  <td>${pet.fepic().toLocaleString('pt-BR')}</td>
+                  <td>${pet.total().toLocaleString('pt-BR')}</td>
+                  <td>${pet.fleg().toLocaleString('pt-BR')}</td>
                   <td>${pet.profit().toLocaleString('pt-BR')}</td>
                   <td>${pet.pdia().toLocaleString('pt-BR')}</td>
                 <tr/>
@@ -120,8 +120,17 @@ const getData = async () => {
             upgrade: product[i][6],
             epicb: product[i][8],
             legb: product[i][9],
+            fup: function(){
+              return Math.round(this.upgrade);
+            },
+            fepic: function(){
+              return Math.round(this.epicb);
+            },
+            fleg: function(){
+              return Math.round(this.legb);
+            },
             total: function(){
-              return Math.round((this.qntd*this.valor)+this.epicb+this.upgrade);
+              return Math.round((this.valor*this.qntd)+this.epicb+this.upgrade);
             },
             profit: function(){
               return Math.round(this.legb-this.total());
