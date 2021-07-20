@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="https://i.imgur.com/B9rmIXx.png">
-        <script src="script.js" defer></script>
+        <script src="bits.js" defer></script>
 
         <!-- BOOTSTRAP -->
             <!-- Font Awesome -->
@@ -16,13 +16,13 @@
             <!-- MDB -->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
 
-        <title>Kat Calculator</title>
+        <title>Bits to Coins</title>
     </head>
     <body>
         <!-- Navbar -->
         <nav class="navbar bg-dark navbar-dark">
             <div class="container">
-            <a class="navbar-brand" href="#"
+            <a class="navbar-brand" href="/index.html"
                 ><img
                 id="logo"
                 src="https://i.imgur.com/C0znTFR.png"
@@ -30,12 +30,12 @@
                 draggable="false"
                 height="30"
                 />
-                <h5 class="text-center mb-0 ms-2"> Kat Calculator </h5>
+                <h5 class="text-center mb-0 ms-2" id="second"> Kat Calculator </h5>
             </a>
             <div class="text-center">
                 <button id="get-btn" class="btn btn-success " style="background-color:#249436">CALCULAR</button>
             </div>
-            <a class="navbar-brand" href="/bits.html"
+            <a class="navbar-brand" href="#"
                 ><img
                 id="logo"
                 src="https://i.imgur.com/1gsGrdI.png"
@@ -43,23 +43,17 @@
                 draggable="false"
                 height="30"
                 />
-                <h5 class="text-center mb-0 ms-2" id="second"> Bits to Coins</h5>
+                <h5 class="text-center mb-0 ms-2"> Bits to Coins</h5>
             </a>
         </nav>
         <table id="central" class="table table-hover w-auto">
             <thead id="tabela">
               <tr>
-                <th scope="col"><i class="fas fa-dog"></i> Pet</th>
-                <th scope="col">Dias</th>
+                <th scope="col"><i class="fas fa-store"></i></th>
                 <th scope="col">Item</th>
-                <th scope="col">Valor</th>
-                <th scope="col">Quantia</th>
-                <th scope="col">Upgrade</th>
-                <th scope="col">Epic BIN</th>
-                <th scope="col">Total Gasto</th>
-                <th scope="col">Legen. BIN</th>
-                <th scope="col">Profit</th>
-                <th scope="col">P/ Dia</th>
+                <th scope="col">Bits</th>
+                <th scope="col">Lowest BIN</th>
+                <th scope="col">Coins/Bit</th>
               </tr>
             </thead>
             <tbody id="tableData"></tbody>
