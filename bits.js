@@ -13,7 +13,7 @@ let product = [ //img, nome, bits, lowest bin
   ['https://i.imgur.com/jHSpdsi.png', 'Bits Talisman', 15000, 999999999],
   ['https://i.imgur.com/Rp8oGxd.png', 'Autopet Rules 2-Pack', 21000, 999999999],
   ['https://i.imgur.com/1ohrX59.png', 'Heat Core', 3000, 999999999],
-  ['https://i.imgur.com/P2FyNbG.png', 'Hyper Catalyst Upgrade', 1350, 999999999],
+  ['https://i.imgur.com/P2FyNbG.png', 'Hyper Catalyst Upgrade', 300, 999999999],
   ['https://i.imgur.com/aNuaWmR.png', 'Ultimate Carrot Candy Upgrade', 8000, 999999999],
   ['https://i.imgur.com/G2MP7iL.png', 'Colossal Experience Bottle Upgrade', 1200, 999999999],
   ['https://i.imgur.com/O4CQl6X.png', 'Jumbo Backpack Upgrade', 4000, 999999999],
