@@ -19,8 +19,6 @@ let product = [ //img, nome, bits, lowest bin
   ['https://i.imgur.com/O4CQl6X.png', 'Jumbo Backpack Upgrade', 4000, 999999999],
   ['https://i.imgur.com/WB72xLY.png', 'Minion Storage X-pender', 1500, 999999999],
   ['https://i.imgur.com/YqAR4BA.png', 'Hologram', 2000, 999999999],
-  ['https://i.imgur.com/2WkgIS2.png', 'Dungeon Sack', 10000, 0],
-  ['https://i.imgur.com/eC3nLVQ.png', 'Rune Sack', 10000, 0],
   ['https://i.imgur.com/1LaMDyo.png', 'Accessory Enrichment Swapper', 200, 999999999],
   ['https://i.imgur.com/p3GgOf3.png', 'Speed Enrichment', 5000, 999999999],
   ['https://i.imgur.com/8sIEsfR.png', 'Intelligence Enrichment', 5000, 999999999],
